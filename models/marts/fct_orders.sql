@@ -13,11 +13,6 @@ with
         select *
         from {{ref("dim_suppliers")}}
     )
-
-    , customers as (
-        select *
-        from {{ref("dim_customers")}}
-    )
     , categories as (
         select *
         from {{ref("dim_categories")}}
