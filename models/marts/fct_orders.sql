@@ -4,9 +4,28 @@ with
         from {{ref("dim_customers")}}
     )
 
+    , products as (
+        select *
+        from {{ref("dim_products")}}
+    )
+
+    , suppliers as (
+        select *
+        from {{ref("dim_suppliers")}}
+    )
+
+    , customers as (
+        select *
+        from {{ref("dim_customers")}}
+    )
+    , categories as (
+        select *
+        from {{ref("dim_categories")}}
+    )
+    
     , orders as (
         select *
-        from {{ref("stg_orders")}}
+        from {{ref("int_order_details")}}
     )
 
     select
